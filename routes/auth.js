@@ -16,7 +16,7 @@ router.post('/signup', async (req, res) => {
             .single();
 
         if (existingUser) {
-            return res.status(400).json({ msg: 'User already exists' });
+            return res.status(400).json({ msg: 'User already exists, please try with different email' });
         }
 
         // Hash the password
